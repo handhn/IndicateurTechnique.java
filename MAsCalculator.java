@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class MovingAverages {
+public class MAsCalculator {
 
     public static double calculateSMA(List<Double> prices, int period) {
         if (prices.size() < period) {
