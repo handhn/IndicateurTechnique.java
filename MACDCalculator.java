@@ -27,7 +27,7 @@ public class MACDCalculator {
         return ema;
     }
 
-    public List<Double> calculate(List<Double> prices) {
+    public List<Double> calculateMACD(List<Double> prices) {
         // Étape 1: Calcul des MME courte et longue
         List<Double> shortEMA = calculateEMA(prices, shortPeriod);
         List<Double> longEMA = calculateEMA(prices, longPeriod);
@@ -58,7 +58,7 @@ public class MACDCalculator {
                 23.10, 23.33, 22.68, 23.10, 22.40, 22.17);
 
         MACDCalculator macd = new MACDCalculator(12, 26, 9);
-        List<Double> histogram = macd.calculate(prices);
+        List<Double> histogram = macd.calculateMACD(prices);
 
         System.out.println("MACD Histogram:");
         for (int i = 0; i < histogram.size(); i++) {
