@@ -43,14 +43,14 @@ public class MAsCalculator {
 
     // test 
     
-    public static void main(String[] args) {
-        List<Double> prices = List.of(10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0);
-        int period = 5;
+//    public static void main(String[] args) {
+//        List<Double> prices = List.of(10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, //19.0);
+//        int period = 5;
 
-        double sma = calculateSMA(prices, period);
-        System.out.printf("SMA (%d jours): %.2f%n", period, sma);
+//        double sma = calculateSMA(prices, period);
+//        System.out.printf("SMA (%d jours): %.2f%n", period, sma);
 
-        double ema = calculateEMA(prices, period);
-        System.out.printf("EMA (%d jours): %.2f%n", period, ema);
-    }
+//        double ema = calculateEMA(prices, period);
+//        System.out.printf("EMA (%d jours): %.2f%n", period, ema);
+//    }
 }
