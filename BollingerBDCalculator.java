@@ -46,16 +46,16 @@ public class BollingerBDCalculator {
 
     
     // test
-    public static void main(String[] args) {
-        List<Double> prices = List.of(22.1, 22.5, 22.8, 23.0, 23.5, 23.7, 24.0, 24.2, 24.3, 24.5, 
-                                      24.6, 24.8, 25.0, 25.5, 25.8, 26.0, 26.1, 26.7, 27.0, 27.5);
-        int period = 20;
-        double k = 2;
+//    public static void main(String[] args) {
+//        List<Double> prices = List.of(22.1, 22.5, 22.8, 23.0, 23.5, 23.7, 24.0, 24.2, 24.3, 24.5, 
+//                                      24.6, 24.8, 25.0, 25.5, 25.8, 26.0, 26.1, 26.7, 27.0, 27.5);
+//        int period = 20;
+//        double k = 2;
 
-        calculateBollingerBD result = calculate(prices, period, k);
+//        calculateBollingerBD result = calculate(prices, period, k);
 
-        System.out.printf("SMA: %.2f%n", result.sma);
-        System.out.printf("Bande Supérieure: %.2f%n", result.upperBand);
-        System.out.printf("Bande Inférieure: %.2f%n", result.lowerBand);
-    }
+//        System.out.printf("SMA: %.2f%n", result.sma);
+//        System.out.printf("Bande Supérieure: %.2f%n", result.upperBand);
+//        System.out.printf("Bande Inférieure: %.2f%n", result.lowerBand);
+//    }
 }
