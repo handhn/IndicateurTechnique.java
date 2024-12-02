@@ -45,30 +45,32 @@ public class IndicateurTechnique {
         BollingerBDCalculator.calculateBollingerBD bollingerBands = BollingerBDCalculator.calculate(prices, period, k);
         return new IndicateurTechnique("BollingerBands", bollingerBands);
     }
-}
+
 
 
 
 
 // test 
 
-List<Double> prices = /* vos données de prix */;
-int period = 14;
-double k = 2.0;
+@Override
+    public String toString() {
+        switch (nom) {
+            case "RSI":
+                return String.format("%s: %.2f", nom, (Double) valeur);
+            case "SMA":
+            case "EMA":
+                return String.format("%s: %.2f", nom, (Double) valeur);
+            case "MACD":
+                List<Double> macdValues = (List<Double>) valeur;
+                return String.format("%s: %s", nom, macdValues.toString());
+            case "BollingerBands":
+                BollingerBDCalculator.calculateBollingerBD bb = (BollingerBDCalculator.calculateBollingerBD) valeur;
+                return String.format("%s: SMA=%.2f, Upper=%.2f, Lower=%.2f", nom, bb.sma, bb.upperBand, bb.lowerBand);
+            default:
+                return nom + ": " + valeur;
+        }
+    }
 
-IndicateurTechnique rsi = IndicateurTechnique.createRSI(prices, period);
-IndicateurTechnique sma = IndicateurTechnique.createSMA(prices, period);
-IndicateurTechnique ema = IndicateurTechnique.createEMA(prices, period);
-IndicateurTechnique macd = IndicateurTechnique.createMACD(prices, 12, 26, 9);
-IndicateurTechnique bollingerBands = IndicateurTechnique.createBollingerBands(prices, period, k);
-
-System.out.println(rsi.getNom() + ": " + rsi.getValeur());
-System.out.println(sma.getNom() + ": " + sma.getValeur());
-System.out.println(ema.getNom() + ": " + ema.getValeur());
-System.out.println(macd.getNom() + ": " + macd.getValeur());
-System.out.println(bollingerBands.getNom() + ": " + bollingerBands.getValeur());
-
-
-
+}
 
 
