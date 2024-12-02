@@ -54,11 +54,11 @@ public class RSICalculator {
 
     //  test 
   
-    public static void main(String[] args) {
-        List<Double> closingPrices = List.of(44.34, 44.09, 44.15, 43.61, 44.33, 44.83, 45.10, 45.42,
-                45.84, 46.08, 45.89, 46.03, 45.61, 46.28, 46.28, 46.00);
+//    public static void main(String[] args) {
+//        List<Double> closingPrices = List.of(44.34, 44.09, 44.15, 43.61, 44.33, 44.83, 45.10, 45.42,
+//                45.84, 46.08, 45.89, 46.03, 45.61, 46.28, 46.28, 46.00);
         
-        double rsi = calculateRSI(closingPrices, DEFAULT_PERIOD);
-        System.out.printf("RSI: %.2f", rsi);
-    }
+//        double rsi = calculateRSI(closingPrices, DEFAULT_PERIOD);
+//        System.out.printf("RSI: %.2f", rsi);
+//    }
 }
